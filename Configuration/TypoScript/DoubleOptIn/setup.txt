@@ -62,20 +62,6 @@ plugin.Tx_Formhandler.settings.predef.cleverreach_example_doubleoptin {
         }
     }
 
-    # Interceptors configuration
-    #initInterceptors {
-    #    1 {
-    #        class = Tx_Formhandler_Interceptor_Filtreatment
-    #    }
-    #}
-
-    # Loggers configuration
-    #loggers {
-    #    1 {
-    #        class = Tx_Formhandler_Logger_DB
-    #    }
-    #}
-    
 
     # Finishers configuration
     finishers {
