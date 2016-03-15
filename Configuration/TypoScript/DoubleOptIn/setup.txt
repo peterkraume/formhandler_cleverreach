@@ -10,8 +10,8 @@ plugin.Tx_Formhandler.settings.predef.cleverreach_example_doubleoptin {
     templateFile = EXT:formhandler_cleverreach/Resources/Private/Templates/example_doubleoptin.html
     langFile.1 = EXT:formhandler_cleverreach/Resources/Private/Language/formhandler.xml
     cssFile.1 = EXT:formhandler_cleverreach/Resources/Public/CSS/styles.css
-    
-    additionalIncludePaths.1 = EXT:formhandler_cleverreach/Classes/Formhandler
+
+    additionalIncludePaths.1 = EXT:formhandler_cleverreach/Classes/Finisher
     
     formValuesPrefix = formhandler
     
@@ -37,7 +37,7 @@ plugin.Tx_Formhandler.settings.predef.cleverreach_example_doubleoptin {
     # Validators configuration
     validators {
         1 {
-            class = Tx_Formhandler_Validator_Default
+            class = Validator\Default
             config {
                 fieldConf {
                     firstname {
@@ -65,8 +65,8 @@ plugin.Tx_Formhandler.settings.predef.cleverreach_example_doubleoptin {
 
     # Finishers configuration
     finishers {
-        
-        2.class = Tx_Formhandler_Finisher_Subscribe
+
+        2.class = \svewap\FormhandlerCleverreach\Finisher\Subscribe
         2.config < plugin.tx_formhandlercleverreach.config
         2.config {
         
@@ -89,7 +89,7 @@ plugin.Tx_Formhandler.settings.predef.cleverreach_example_doubleoptin {
             }
             
         }
-        3.class = Tx_Formhandler_Finisher_SubmittedOK
+        3.class = Finisher\SubmittedOK
         3.config {
             returns = 1
         }

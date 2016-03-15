@@ -1,4 +1,6 @@
 <?php
+namespace svewap\FormhandlerCleverreach\Validator\ErrorCheck;
+
 /***************************************************************
 *  Copyright notice
 *
@@ -30,7 +32,10 @@
  * @package	Tx_Formhandler
  * @subpackage	ErrorChecks
  */
-class Tx_Formhandler_ErrorCheck_Cleverreachemail extends Tx_Formhandler_AbstractErrorCheck {
+
+use svewap\FormhandlerCleverreach\Finisher\CleverReach;
+
+class Cleverreachemail extends \Typoheads\Formhandler\Validator\ErrorCheck\AbstractErrorCheck {
 
 	protected $subscriber_found = FALSE;
 	
@@ -46,7 +51,7 @@ class Tx_Formhandler_ErrorCheck_Cleverreachemail extends Tx_Formhandler_Abstract
 		
 		$this->subscriber_active = $return->data->active;
 		
-		$this->subscriber_found = ($return->status == Tx_Formhandler_Finisher_CleverReach::STATUS_SUCCESS);
+		$this->subscriber_found = ($return->status == CleverReach::STATUS_SUCCESS);
 		
 		return $checkFailed;
 	}

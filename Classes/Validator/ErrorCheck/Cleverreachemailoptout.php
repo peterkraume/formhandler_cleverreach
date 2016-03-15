@@ -1,4 +1,6 @@
 <?php
+namespace svewap\FormhandlerCleverreach\Validator\ErrorCheck;
+
 /***************************************************************
 *  Copyright notice
 *
@@ -29,7 +31,7 @@
  * @package	Tx_Formhandler
  * @subpackage	ErrorChecks
  */
-class Tx_Formhandler_ErrorCheck_Cleverreachemailoptout extends Tx_Formhandler_ErrorCheck_Cleverreachemail {
+class Cleverreachemailoptout extends Cleverreachemail {
 
 	public function check() {
 		$checkFailed = parent::check();

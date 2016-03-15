@@ -1,4 +1,6 @@
 <?php
+namespace svewap\FormhandlerCleverreach\Finisher;
+
 /***************************************************************
 *  Copyright notice
 *
@@ -29,7 +31,10 @@
  * @package	Tx_Formhandler
  * @subpackage	Finisher
  */
-class Tx_Formhandler_Finisher_CleverReach extends Tx_Formhandler_AbstractFinisher {
+
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
+class Cleverreach extends \Typoheads\Formhandler\Finisher\AbstractFinisher {
 	
 	const STATUS_SUCCESS = "SUCCESS";
 
@@ -129,7 +134,7 @@ class Tx_Formhandler_Finisher_CleverReach extends Tx_Formhandler_AbstractFinishe
 							$fieldValue = time();
 							break;
 						case 'ip':
-							$fieldValue = t3lib_div::getIndpEnv('REMOTE_ADDR');
+							$fieldValue = GeneralUtility::getIndpEnv('REMOTE_ADDR');
 							break;
 						case 'inserted_uid':
 							$table = $options['special.']['table'];
@@ -171,7 +176,7 @@ class Tx_Formhandler_Finisher_CleverReach extends Tx_Formhandler_AbstractFinishe
 	 * @return array
 	 */
 	private function explodeList($list,$sep = ',') {
-		$items = t3lib_div::trimExplode($sep,$list);
+		$items = GeneralUtility::trimExplode($sep,$list);
 		$splitArray = array();
 		foreach ($items as $idx => $item) {
 			if (isset($this->gp[$item])) {
@@ -258,9 +263,9 @@ class Tx_Formhandler_Finisher_CleverReach extends Tx_Formhandler_AbstractFinishe
 	private function parseFilesList($settings,$type,$key) {
 		if (isset($settings[$key.'.']) && is_array($settings[$key.'.'])) {
 			$parsed = $this->utilityFuncs->getSingle($settings,$key);
-			$parsed = t3lib_div::trimExplode(',',$parsed);
+			$parsed = GeneralUtility::trimExplode(',',$parsed);
 		} elseif ($settings[$key]) {
-			$files = t3lib_div::trimExplode(',',$settings[$key]);
+			$files = GeneralUtility::trimExplode(',',$settings[$key]);
 			$parsed = array();
 			$sessionFiles = Tx_Formhandler_Globals::$session->get('files');
 			foreach ($files as $idx => $file) {

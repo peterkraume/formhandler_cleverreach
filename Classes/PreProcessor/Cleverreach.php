@@ -1,4 +1,6 @@
 <?php
+namespace svewap\FormhandlerCleverreach\PreProcessor;
+
 /***************************************************************
 *  Copyright notice
 *
@@ -29,7 +31,7 @@
  * @package	Tx_Formhandler
  * @subpackage	Finisher
  */
-class Tx_Formhandler_PreProcessor_CleverReach extends Tx_Formhandler_AbstractPreProcessor {
+class Cleverreach extends \Typoheads\Formhandler\PreProcessor\AbstractPreProcessor {
 
 	/**
 	 * The main method called by the controller
