@@ -14,8 +14,8 @@ plugin.Tx_Formhandler.settings.predef.cleverreach_example_doubleoptin {
     additionalIncludePaths.1 = EXT:formhandler_cleverreach/Classes/Finisher
     
     formValuesPrefix = formhandler
-    
-    preProcessors.1.class = Tx_Formhandler_PreProcessor_CleverReach
+
+    preProcessors.1.class = \svewap\FormhandlerCleverreach\PreProcessor\CleverReach
     
     masterTemplateFile = TEXT
     masterTemplateFile.value = EXT:formhandler_cleverreach/Resources/Private/Templates/mastertemplate.html

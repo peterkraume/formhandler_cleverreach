@@ -34,7 +34,7 @@ namespace svewap\FormhandlerCleverreach\Finisher;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class Cleverreach extends \Typoheads\Formhandler\Finisher\AbstractFinisher {
+class CleverReach extends \Typoheads\Formhandler\Finisher\AbstractFinisher {
 	
 	const STATUS_SUCCESS = "SUCCESS";
 

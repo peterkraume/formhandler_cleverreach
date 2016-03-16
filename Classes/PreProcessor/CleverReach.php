@@ -31,7 +31,7 @@ namespace svewap\FormhandlerCleverreach\PreProcessor;
  * @package	Tx_Formhandler
  * @subpackage	Finisher
  */
-class Cleverreach extends \Typoheads\Formhandler\PreProcessor\AbstractPreProcessor {
+class CleverReach extends \Typoheads\Formhandler\PreProcessor\AbstractPreProcessor {
 
 	/**
 	 * The main method called by the controller
