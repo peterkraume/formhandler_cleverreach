@@ -29,7 +29,7 @@
     }
   },
   "replace": {
-    "formhandler-cleverreach": "self.version",
+    "formhandler_cleverreach": "self.version",
     "typo3-ter/formhandler-cleverreach": "self.version"
   },
   "config": {
