@@ -25,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "svewap\\formhandler-cleverreach\\": "Classes"
+      "svewap\\FormhandlerCleverreach\\": "Classes"
     }
   },
   "replace": {
